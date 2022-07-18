@@ -58,5 +58,3 @@ for cell in room_locations:
     print("\n")
 
 print(room_and_times)
-
-print("commit")
