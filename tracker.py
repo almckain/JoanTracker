@@ -15,9 +15,14 @@ room_and_times = {
 
 }
 
-def print_list(list):
-    for item in list:
-        return item
+def calculate_average(num_of_times):
+    for i in range(0, len(num_of_times) - 1):
+        difference = num_of_times[i] - (num_of_times[i + 1])
+        y = num_of_times[i + 1]
+        x = num_of_times[i]
+
+        print(f"{difference} = {x} - {y}")
+    
 
 #stores the cell letters in a list
 for row in range(1,2): #rows 1-29
@@ -47,14 +52,23 @@ for cell in room_locations:
             
     temp_list.reverse()
     
+    #
+    # Calculate average here
+    # ##
+    calculate_average(temp_list)
+
+
     for time in temp_list:
         print(time)
     
-    num_of_changes = len(temp_list)
-    print(num_of_changes)
 
     #clears the list for the next room
     temp_list.clear()
     print("\n")
 
 print(room_and_times)
+
+#
+# passing in a list
+# we need it to do the operations between 1 and the length of the list, MINUS ONE
+# For every iteration, take the current index of the list and subtract the next index#
