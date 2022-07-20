@@ -16,12 +16,14 @@ room_and_times = {
 }
 
 def calculate_average(num_of_times):
+    sum_from_difference = 0
     for i in range(0, len(num_of_times) - 1):
         difference = num_of_times[i] - (num_of_times[i + 1])
         y = num_of_times[i + 1]
         x = num_of_times[i]
-
-        print(f"{difference} = {x} - {y}")
+        #print(f"{difference} = {x} - {y}")
+    average = sum_from_difference / len(num_of_times)
+    print(f"average is {average}")
     
 
 #stores the cell letters in a list
