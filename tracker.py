@@ -16,22 +16,18 @@ room_and_times = {
 }
 
 def calculate_sum(num_of_times):
-    x = timedelta(days=0)
+    sum_of_days = timedelta(days=0)
+    
     for i in range(0, len(num_of_times) - 1):
         difference = num_of_times[i] - (num_of_times[i + 1])
-        x = x + difference
-        print(x)
+        sum_of_days = sum_of_days + difference
+        
         #x = num_of_times[i]
         #y = num_of_times[i + 1]
         #print(f"{difference} = {x} - {y}")
+    average = sum_of_days / len(num_of_times)
+    return timedelta(average()
         
-    
-##
-"""
-def calculate_average():
-    print("balls")
-"""
-##
 
 #stores the cell letters in a list
 for row in range(1,2): #rows 1-29
@@ -64,7 +60,8 @@ for cell in room_locations:
     #
     # Calculate average here
     # ##
-    calculate_sum(temp_list)
+    average_change = calculate_sum(temp_list)
+    print(average_change)
 
 
     for time in temp_list:
