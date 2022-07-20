@@ -35,6 +35,7 @@ for row in range(1,2): #rows 1-29
         room_and_key.append(get_column_letter(col))
     print("\n") 
 
+#Stores cell location from the excel sheet
 room_locations = [] 
 for val in room_and_key:
     room_locations.append(val)
