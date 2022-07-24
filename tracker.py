@@ -11,7 +11,7 @@ ws = wb.active
 
 room_and_key = []
 
-room_and_times = {
+room_and_averages = {
 
 }
 
@@ -30,6 +30,8 @@ def calculate_sum(num_of_times):
     return average
         
 
+
+
 #stores the cell letters in a list
 for row in range(1,2): #rows 1-29
     for col in range(1, 46): #col 1-40
@@ -45,34 +47,31 @@ for val in room_and_key:
 for letter in room_locations: 
     for i in range(1,2):
         current_room = ws[letter + str(i)]
-        room_and_times[current_room.value] = []
 
 #Cycles through each cell
 for cell in room_locations: 
     #temporary list that store the times from each room; clears after use
-    temp_list = []
+    list_of_times = []
     for i in range(2,39):
         time = ws[cell + str(i)]
         #stores cell data in the temporary list if return is not null
         if(time.value != None):
-            temp_list.append((time.value).date())
+            list_of_times.append((time.value).date())
             
-    temp_list.reverse()
+    list_of_times.reverse()
     
-    #
-    # Calculate average here
-    # ##
-    average_change = calculate_sum(temp_list)
-    print(average_change)
-
-
-    for time in temp_list:
-        print(time)
-    
+    #Calls calculate average
+    average_change = calculate_sum(list_of_times)
+    #print(average_change)
+    room_and_averages.values
+    print(cell)
 
     #clears the list for the next room
-    temp_list.clear()
+    list_of_times.clear()
     print("\n")
 
-print(room_and_times)
+print(room_and_averages)
+
+for c in room_locations:
+    print(c)
 
