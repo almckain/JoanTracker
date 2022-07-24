@@ -43,16 +43,11 @@ for row in range(1,2): #rows 1-29
         #print("\n") 
         print("\n")
 
-"""
-#Stores rooms in list
-for letter in room_locations: 
-    for i in range(1,2):
-        current_room = ws[letter + str(i)]
-        print()
-"""
+
 
 #Cycles through each cell
-for cell in room_locations: 
+for cell in room_locations:
+    print("We are currently in cell " + cell) 
     #temporary list that store the times from each room; clears after use
     list_of_times = []
     for i in range(2,39):
@@ -60,7 +55,8 @@ for cell in room_locations:
         #stores cell data in the temporary list if return is not null
         if(time.value != None):
             list_of_times.append((time.value).date())
-            
+        for i in list_of_times:
+            print("\t Storing this time " + str(i))
     list_of_times.reverse()
     
     #Calls calculate average
