@@ -22,11 +22,12 @@ def calculate_sum(num_of_times):
         difference = num_of_times[i] - (num_of_times[i + 1])
         sum_of_days = sum_of_days + difference
         
-        #x = num_of_times[i]
-        #y = num_of_times[i + 1]
-        #print(f"{difference} = {x} - {y}")
+        x = num_of_times[i]
+        y = num_of_times[i + 1]
+        #print(f"\t\t{difference} = {x} - {y}")
     average = sum_of_days / len(num_of_times)
-    return timedelta(average()
+    #print(average)
+    return average
         
 
 #stores the cell letters in a list
@@ -75,7 +76,3 @@ for cell in room_locations:
 
 print(room_and_times)
 
-#
-# passing in a list
-# we need it to do the operations between 1 and the length of the list, MINUS ONE
-# For every iteration, take the current index of the list and subtract the next index#
