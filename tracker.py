@@ -43,13 +43,13 @@ for row in range(1,2): #rows 1-29
         #print("\n") 
         print("\n")
 
-#Stores cell location from the excel sheet
-
-
+"""
 #Stores rooms in list
 for letter in room_locations: 
     for i in range(1,2):
         current_room = ws[letter + str(i)]
+        print()
+"""
 
 #Cycles through each cell
 for cell in room_locations: 
