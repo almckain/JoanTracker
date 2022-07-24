@@ -9,7 +9,7 @@ listOfRooms = []
 wb = load_workbook("/Users/aaronmckain/Desktop/JoanTrackerProj/unitTracker.xlsx")
 ws = wb.active
 
-room_and_key = []
+room_locations = []
 
 room_and_averages = {
 
@@ -35,13 +35,16 @@ def calculate_sum(num_of_times):
 #stores the cell letters in a list
 for row in range(1,2): #rows 1-29
     for col in range(1, 46): #col 1-40
-        room_and_key.append(get_column_letter(col))
-    print("\n") 
+        room_locations.append(get_column_letter(col))
+        print("\nStoring column " + get_column_letter(col) + " in the list room_locations")
+        print("The list currently contains the following letters: ")
+        for i in room_locations:
+            print(i, end = " ")
+        #print("\n") 
+        print("\n")
 
 #Stores cell location from the excel sheet
-room_locations = [] 
-for val in room_and_key:
-    room_locations.append(val)
+
 
 #Stores rooms in list
 for letter in room_locations: 
@@ -62,16 +65,13 @@ for cell in room_locations:
     
     #Calls calculate average
     average_change = calculate_sum(list_of_times)
-    #print(average_change)
     room_and_averages.values
-    print(cell)
 
     #clears the list for the next room
     list_of_times.clear()
-    print("\n")
+    #print("\n")
 
 print(room_and_averages)
 
-for c in room_locations:
-    print(c)
+
 
