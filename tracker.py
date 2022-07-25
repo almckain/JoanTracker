@@ -43,10 +43,6 @@ for row in range(1,2): #rows 1-2
             print(i, end = " ")
         print("\n") 
 
-for cell in room_locations:
-    room = ws[cell + str(1)]
-    room_and_averages[room.value] = ""
-    #print(room.value)
 
 #Cycles through each cell
 for cell in room_locations:
