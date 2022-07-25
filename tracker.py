@@ -45,7 +45,8 @@ for row in range(1,2): #rows 1-2
 
 for cell in room_locations:
     room = ws[cell + str(1)]
-    print(room.value)
+    room_and_averages[room.value] = ""
+    #print(room.value)
 
 #Cycles through each cell
 for cell in room_locations:
@@ -69,7 +70,7 @@ for cell in room_locations:
     print("The average days between changes is " + str(average_change))
 
     for i in room_and_averages:
-        room_and_averages[i] = average_change
+        room_and_averages[i] = str(average_change)
         #print(room_and_averages[i])
 
     #clears the list for the next room
