@@ -65,7 +65,9 @@ for cell in room_locations:
     average_change = calculate_sum(list_of_times)
     print("The average days between changes is " + str(average_change))
     
+    #Assigns room to key
     room = ws[cell + str(1)]
+    #Assigns average to value
     room_and_averages[room.value] = str(average_change)
 
     #clears the list for the next room
