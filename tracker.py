@@ -46,7 +46,6 @@ for row in range(1,2): #rows 1-2
 
 #Cycles through each cell
 for cell in room_locations:
-    #print("We are currently in cell " + cell) <><><><><><<><><><><><><><><><><><><><><><><><><><><><><><><><<
     #temporary list that store the times from each room; clears after use
     list_of_times = []
     for i in range(2,39):
@@ -57,8 +56,7 @@ for cell in room_locations:
         
     #Makes the temporary list sorted from earliest to latest      
     list_of_times.reverse()
-   #for i in list_of_times: <><><><><><<><><><><><><><><><><><><><><><><><><><><><><><><><<
-        #print(i) <><><><><><<><><><><><><><><><><><><><><><><><><><><><><><><><<
+
     
     
     #Calls calculate average
@@ -68,7 +66,7 @@ for cell in room_locations:
     #Assigns room to key
     room = ws[cell + str(1)]
     #Assigns average to value
-    room_and_averages[room.value] = str(average_change.days)
+    room_and_averages[room.value] = int(average_change.days)
 
     #clears the list for the next room
     list_of_times.clear()
