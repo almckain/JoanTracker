@@ -55,17 +55,20 @@ for cell in room_locations:
         #stores cell data in the temporary list if return is not null
         if(time.value != None):
             list_of_times.append((time.value).date())
-        for i in list_of_times:
-            print("\t Storing this time " + str(i))
+        
+    #Makes the temporary list sorted from earliest to latest      
     list_of_times.reverse()
+    for i in list_of_times:
+        print(i)
+    
     
     #Calls calculate average
     average_change = calculate_sum(list_of_times)
-    room_and_averages.values
+    print(average_change)
 
     #clears the list for the next room
     list_of_times.clear()
-    #print("\n")
+    print("\n")
 
 print(room_and_averages)
 
