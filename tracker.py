@@ -64,7 +64,7 @@ for cell in room_locations:
     
     #Calls calculate average
     average_change = calculate_sum(list_of_times)
-    print(average_change)
+    print("The average days between changes is " + str(average_change))
 
     #clears the list for the next room
     list_of_times.clear()
