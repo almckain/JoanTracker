@@ -10,10 +10,10 @@ listOfRooms = []
 wb = load_workbook("/Users/aaronmckain/Desktop/JoanTrackerProj/unitTracker.xlsx")
 ws = wb.active
 
-room_locations = []
+room_locations = [] #Empty list of locations *A, B, C, D, E, F
 
 room_and_averages = {
-
+    #Empty dictionary
 }
 
 def calculate_sum(num_of_times):
@@ -23,12 +23,17 @@ def calculate_sum(num_of_times):
         difference = num_of_times[i] - (num_of_times[i + 1])
         sum_of_days = sum_of_days + difference
         
+        """ Debugging print statement and variables
         x = num_of_times[i]
         y = num_of_times[i + 1]
-        #print(f"\t\t{difference} = {x} - {y}")
+        print(f"\t\t{difference} = {x} - {y}")
+        """
     average = sum_of_days / len(num_of_times)
-    #print(average)
+    # <> print("The average is " + average) 
     return average
+
+def sort_room_averages(averages_dictionary):
+    print("I dont know how to sort a dictionary lmao")
         
 
 
@@ -37,8 +42,8 @@ def calculate_sum(num_of_times):
 for row in range(1,2): #rows 1-2
     for col in range(1, 46): #col 1-40
         room_locations.append(get_column_letter(col))
-        print("\nStoring column " + get_column_letter(col) + " in the list room_locations")
-        print("The list currently contains the following letters: ")
+        # <>print("\nStoring column " + get_column_letter(col) + " in the list room_locations")
+        # <> print("The list currently contains the following letters: ") 
         for i in room_locations:
             print(i, end = " ")
         print("\n") 
@@ -57,8 +62,6 @@ for cell in room_locations:
     #Makes the temporary list sorted from earliest to latest      
     list_of_times.reverse()
 
-    
-    
     #Calls calculate average
     average_change = calculate_sum(list_of_times)
     print("The average days between changes is " + str(average_change.days))
@@ -72,7 +75,26 @@ for cell in room_locations:
     list_of_times.clear()
     print("\n")
 
+#View hashmap
 print(room_and_averages)
 
+
+for value in room_and_averages:
+    
+    pos_one = 0
+    pos_two = 0
+    pos_three = 0
+    sorted_list = []
+
+    pos_one = room_and_averages[value]
+    pos_two = room_and_averages[value + 1]
+
+    print(pos_one)
+    print(pos_two)
+    print(room_and_averages[value])
+
+print("Number of rooms " + len(room_and_averages))
+for i in range(1, len(room_and_averages)):
+    print(i)
 
 
