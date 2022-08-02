@@ -78,23 +78,23 @@ for cell in room_locations:
 #View hashmap
 print(room_and_averages)
 
+def sort_rooms():
+    for value in room_and_averages:
+        
+        pos_one = 0
+        pos_two = 0
+        pos_three = 0
+        sorted_list = []
 
-for value in room_and_averages:
-    
-    pos_one = 0
-    pos_two = 0
-    pos_three = 0
-    sorted_list = []
+        pos_one = room_and_averages[value]
+        pos_two = room_and_averages[value + 1]
 
-    pos_one = room_and_averages[value]
-    pos_two = room_and_averages[value + 1]
+        print(pos_one)
+        print(pos_two)
+        print(room_and_averages[value])
 
-    print(pos_one)
-    print(pos_two)
-    print(room_and_averages[value])
-
-print("Number of rooms " + len(room_and_averages))
-for i in range(1, len(room_and_averages)):
-    print(i)
+    print("Number of rooms " + len(room_and_averages))
+    for i in range(1, len(room_and_averages)):
+        print(i)
 
 
