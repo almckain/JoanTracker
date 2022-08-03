@@ -52,6 +52,7 @@ for row in range(1,2): #rows 1-2
         print("\n") 
 
 
+
 #Cycles through each cell
 for cell in room_locations:
     #temporary list that store the times from each room; clears after use
@@ -71,8 +72,9 @@ for cell in room_locations:
     
     #Assigns room to key
     room = ws[cell + str(1)]
+    
     #Assigns average to value
-    room_and_averages[room.value] = int(average_change.days)
+    room_and_averages[str(room.value)] = int(average_change.days)
 
     #clears the list for the next room
     list_of_times.clear()
@@ -80,8 +82,25 @@ for cell in room_locations:
 
 #Sorts dictionary
 sorted_dict = dict(sorted(room_and_averages.items(), key=operator.itemgetter(1)))
+#sorted_dict = sorted(room_and_averages.items())
 #View dictionary
-print(sorted_dict)
+#print(sorted_dict)
+
+
+
+rooms = list(sorted_dict.keys())
+changes = list(sorted_dict.values())
+
+print("\n")
+print(type(rooms[3]))
+print(type(changes[1]))
+plt.title("Days Between Joan Changes")
+plt.xlabel("Room Number")
+plt.ylabel("Days")
+plt.bar(rooms, changes)
+plt.show()
+
+
 
 
 
