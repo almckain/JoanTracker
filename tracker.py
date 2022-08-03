@@ -4,8 +4,7 @@ from openpyxl.utils import get_column_letter
 from datetime import date, datetime, timedelta
 from openpyxl import Workbook, load_workbook
 import operator
-#import matplotlib.pylab as plt
-
+import matplotlib.pyplot as plt
 
 #Creating a list
 listOfRooms = []
@@ -83,6 +82,8 @@ for cell in room_locations:
 sorted_dict = dict(sorted(room_and_averages.items(), key=operator.itemgetter(1)))
 #View dictionary
 print(sorted_dict)
+
+
 
 
 
