@@ -1,7 +1,9 @@
+from ast import operator
 from webbrowser import get
 from openpyxl.utils import get_column_letter
 from datetime import date, datetime, timedelta
 from openpyxl import Workbook, load_workbook
+import operator
 
 #Creating a list
 listOfRooms = []
@@ -77,6 +79,9 @@ for cell in room_locations:
 
 #View hashmap
 print(room_and_averages)
+
+sorted_dict = dict(sorted(room_and_averages.items(), key=operator.itemgetter(1)))
+print(sorted_dict)
 
 def sort_rooms():
     for value in room_and_averages:
