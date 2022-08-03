@@ -42,7 +42,7 @@ def sort_room_averages(averages_dictionary):
 
 
 
-#stores the cell letters in a list
+#Stores the cell letters in a list
 for row in range(1,2): #rows 1-2
     for col in range(1, 46): #col 1-40
         room_locations.append(get_column_letter(col))
@@ -79,10 +79,9 @@ for cell in room_locations:
     list_of_times.clear()
     print("\n")
 
-#View hashmap
-print(room_and_averages)
-
+#Sorts dictionary
 sorted_dict = dict(sorted(room_and_averages.items(), key=operator.itemgetter(1)))
+#View dictionary
 print(sorted_dict)
 
 
