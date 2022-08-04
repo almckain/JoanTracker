@@ -95,9 +95,11 @@ print("\n")
 print(type(rooms[3]))
 print(type(changes[1]))
 plt.title("Days Between Joan Changes")
-plt.xlabel("Room Number")
-plt.ylabel("Days")
-plt.bar(rooms, changes)
+plt.ylabel("Room Number")
+plt.xlabel("Days")
+plt.barh(rooms, changes)
+plt.tight_layout()
+
 plt.show()
 
 
