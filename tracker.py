@@ -10,7 +10,8 @@ import matplotlib.pyplot as plt
 wb = load_workbook("/Users/aaronmckain/Desktop/JoanTrackerProj/unitTracker.xlsx")
 ws = wb.active
 
-room_locations = [] #Empty list of locations *A, B, C, D, E, F
+#Empty list
+room_locations = []
 
 room_and_averages = {
     #Empty dictionary
