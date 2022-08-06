@@ -6,9 +6,6 @@ from openpyxl import Workbook, load_workbook
 import operator
 import matplotlib.pyplot as plt
 
-#Creating a list
-listOfRooms = []
-
 #Location of spreadsheet
 wb = load_workbook("/Users/aaronmckain/Desktop/JoanTrackerProj/unitTracker.xlsx")
 ws = wb.active
