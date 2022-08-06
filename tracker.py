@@ -32,7 +32,6 @@ def calculate_sum(num_of_times):
         print(f"\t\t{difference} = {x} - {y}")
         """
     average = sum_of_days / len(num_of_times)
-    # <> print("The average is " + average) 
     return average
 
 def sort_room_averages(averages_dictionary):
@@ -45,8 +44,6 @@ def sort_room_averages(averages_dictionary):
 for row in range(1,2): #rows 1-2
     for col in range(1, 46): #col 1-40
         room_locations.append(get_column_letter(col))
-        # <>print("\nStoring column " + get_column_letter(col) + " in the list room_locations")
-        # <> print("The list currently contains the following letters: ") 
         for i in room_locations:
             print(i, end = " ")
         print("\n") 
