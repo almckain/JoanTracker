@@ -31,6 +31,22 @@ STEP 3: Install matplotlab
 * Used to display data on a graph *
   1. In the command line run "python3 -m pip install -U matplotlib"
   
+<<------------------------------------------------->>
+<<------------------------------------------------->>
 
+The purpose of this research was conducted to discover which rooms within the library were lacking adequate wifi signal strength. Rooms that were
+lacking a wifi signal were victim to Joan units that would consume battery power quicker than others. This was due to the Joan unit losing connection
+which would cause it to search for a new signal. Once library staff noticed this we began keeping track of when the Joan units needed changed. The graph 
+is shown in figure 1. I wrote wrote this program to read through the data and compare the average amount of days between each unit change. This data was 
+then represented on a graph. The graph can be seen in figure 2.
+
+
+FIGURE (1)
+
+<img width="428" alt="Joan_Graph" src="https://user-images.githubusercontent.com/100253301/183335920-03299c07-2007-47b2-ad19-084c17a3a915.png">
+
+FIGURE (2)
+
+<img width="807" alt="Data_Sheet" src="https://user-images.githubusercontent.com/100253301/183336284-7fafd6b0-55da-4110-9cc4-fd89843f0c87.png">
 
     
